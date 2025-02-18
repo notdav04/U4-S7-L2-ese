@@ -1,10 +1,13 @@
-package com.example.U4_S7_L2_ese.payload;
+package com.example.U4_S7_L2_ese.payload.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.hibernate.validator.constraints.URL;
+
+import java.util.Set;
 
 @Data
 public class DipendenteDTO {
@@ -26,6 +29,12 @@ public class DipendenteDTO {
 
     @URL
     private String avatar;
+
+    private Set<String> ruoli;
+
+    @NotBlank
+    @Size(min=6, max=40)
+    private String password;
 
 
 

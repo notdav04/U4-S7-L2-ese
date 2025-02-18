@@ -1,13 +1,14 @@
 package com.example.U4_S7_L2_ese.service;
 
-import com.example.U4_S6_L5_progetto.entity.Dipendente;
-import com.example.U4_S6_L5_progetto.entity.Prenotazione;
-import com.example.U4_S6_L5_progetto.entity.Viaggio;
-import com.example.U4_S6_L5_progetto.payload.DipendenteDTO;
-import com.example.U4_S6_L5_progetto.payload.PrenotazioneDTO;
-import com.example.U4_S6_L5_progetto.repository.DipendenteDAORepository;
-import com.example.U4_S6_L5_progetto.repository.PrenotazioneDAORepository;
-import com.example.U4_S6_L5_progetto.repository.ViaggioDAORepository;
+
+import com.example.U4_S7_L2_ese.entity.Dipendente;
+import com.example.U4_S7_L2_ese.entity.Prenotazione;
+import com.example.U4_S7_L2_ese.entity.Viaggio;
+import com.example.U4_S7_L2_ese.payload.request.DipendenteDTO;
+import com.example.U4_S7_L2_ese.payload.request.PrenotazioneDTO;
+import com.example.U4_S7_L2_ese.repository.DipendenteDAORepository;
+import com.example.U4_S7_L2_ese.repository.PrenotazioneDAORepository;
+import com.example.U4_S7_L2_ese.repository.ViaggioDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -32,9 +33,9 @@ public class DipendenteService {
     //metodi dao
 
     //salvo dipendente( post )
-    public Long saveDipendente(DipendenteDTO dipendenteDTO){
+    public void saveDipendente(DipendenteDTO dipendenteDTO){
         Dipendente dipendente = fromDipendenteDTOToEntity(dipendenteDTO);
-        return dipendenteDAO.save(dipendente).getId();
+        dipendenteDAO.save(dipendente).getId();
     }
     //prendo tutti i dipendenti( get all )
     public Page<DipendenteDTO> findAllDipendente(Pageable page) {
@@ -135,4 +136,15 @@ public class DipendenteService {
         dipendenteDTO.setAvatar(dipendente.getAvatar());
         return dipendenteDTO;
     }
+
+    //per security
+
+    public Boolean checkUsername(String username) {
+        return dipendenteDAO.existsByUsername(username);
+    }
+
+    public Boolean checkEmail(String email) {
+        return dipendenteDAO.existsByEmail(email);
+    }
+
 }

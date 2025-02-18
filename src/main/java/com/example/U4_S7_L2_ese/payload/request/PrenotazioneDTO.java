@@ -1,4 +1,4 @@
-package com.example.U4_S7_L2_ese.payload;
+package com.example.U4_S7_L2_ese.payload.request;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

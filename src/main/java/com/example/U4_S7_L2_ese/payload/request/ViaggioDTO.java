@@ -1,7 +1,8 @@
-package com.example.U4_S7_L2_ese.payload;
+package com.example.U4_S7_L2_ese.payload.request;
 
-import com.example.U4_S6_L5_progetto.entity.Dipendente;
-import com.example.U4_S6_L5_progetto.entity.StatoViaggio;
+
+import com.example.U4_S7_L2_ese.entity.Dipendente;
+import com.example.U4_S7_L2_ese.entity.StatoViaggio;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

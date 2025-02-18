@@ -1,12 +1,13 @@
 package com.example.U4_S7_L2_ese.service;
 
 
-import com.example.U4_S6_L5_progetto.entity.Dipendente;
-import com.example.U4_S6_L5_progetto.entity.StatoViaggio;
-import com.example.U4_S6_L5_progetto.entity.Viaggio;
-import com.example.U4_S6_L5_progetto.payload.ViaggioDTO;
-import com.example.U4_S6_L5_progetto.repository.DipendenteDAORepository;
-import com.example.U4_S6_L5_progetto.repository.ViaggioDAORepository;
+
+import com.example.U4_S7_L2_ese.entity.Dipendente;
+import com.example.U4_S7_L2_ese.entity.StatoViaggio;
+import com.example.U4_S7_L2_ese.entity.Viaggio;
+import com.example.U4_S7_L2_ese.payload.request.ViaggioDTO;
+import com.example.U4_S7_L2_ese.repository.DipendenteDAORepository;
+import com.example.U4_S7_L2_ese.repository.ViaggioDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

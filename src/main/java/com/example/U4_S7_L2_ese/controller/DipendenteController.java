@@ -2,9 +2,10 @@ package com.example.U4_S7_L2_ese.controller;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-import com.example.U4_S6_L5_progetto.payload.DipendenteDTO;
-import com.example.U4_S6_L5_progetto.payload.PrenotazioneDTO;
-import com.example.U4_S6_L5_progetto.service.DipendenteService;
+
+import com.example.U4_S7_L2_ese.payload.request.DipendenteDTO;
+import com.example.U4_S7_L2_ese.payload.request.PrenotazioneDTO;
+import com.example.U4_S7_L2_ese.service.DipendenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -101,7 +102,7 @@ public class DipendenteController {
 
     //CREAZIONE PRENOTAZIONE( POST )
     @PostMapping("/creaPrenotazione")
-    public ResponseEntity<?> creaPrenotazione( @RequestBody @Validated PrenotazioneDTO prenotazioneDTO, BindingResult validation){
+    public ResponseEntity<?> creaPrenotazione(@RequestBody @Validated PrenotazioneDTO prenotazioneDTO, BindingResult validation){
         if (validation.hasErrors()){
             String message = "ERRORE DI VALIDAZIONE \n";
             for (ObjectError errore : validation.getAllErrors()){

@@ -1,7 +1,8 @@
 package com.example.U4_S7_L2_ese.repository;
 
-import com.example.U4_S6_L5_progetto.entity.Dipendente;
-import com.example.U4_S6_L5_progetto.entity.Prenotazione;
+
+import com.example.U4_S7_L2_ese.entity.Dipendente;
+import com.example.U4_S7_L2_ese.entity.Prenotazione;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

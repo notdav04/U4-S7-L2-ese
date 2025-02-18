@@ -1,9 +1,10 @@
 package com.example.U4_S7_L2_ese.controller;
 
 
-import com.example.U4_S6_L5_progetto.entity.StatoViaggio;
-import com.example.U4_S6_L5_progetto.payload.ViaggioDTO;
-import com.example.U4_S6_L5_progetto.service.ViaggioService;
+
+import com.example.U4_S7_L2_ese.entity.StatoViaggio;
+import com.example.U4_S7_L2_ese.payload.request.ViaggioDTO;
+import com.example.U4_S7_L2_ese.service.ViaggioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
